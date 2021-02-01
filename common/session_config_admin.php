@@ -1,0 +1,9 @@
+<?php
+//セッション有無確認用PHP
+if(!isset($_SESSION)){
+	session_start();
+}
+if(!isset($_SESSION["kintai_admin_uNo"])){
+	header('Location:SessionAdminOut.php');
+}
+?>

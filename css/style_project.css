@@ -1,0 +1,330 @@
+/* # **********************************************************************************************************************************
+   # 全体共通
+   # ***********************************************************************************************************************************/
+
+   body {
+	font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
+	  "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+	  "ＭＳ Ｐゴシック", "MS PGothic";
+	font-size: 100%;
+  }
+  
+  select {
+	border: 2px solid #000000;
+	padding: 3px;
+	cursor: pointer;
+	font-size: 0.8em;
+	font-family: sans-serif;
+	background-color: white;
+  }
+  
+  input[type="text"], textarea{
+	border: 1px solid #a8a8a8;
+	padding: 5px;
+	background: white;
+	}
+  input[type="number"]{
+		border: 1px solid #a8a8a8;
+		padding: 5px;
+		background: white;
+	}
+	input[type="button"]{
+    background: #e0e0e0;
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid #c1c1c1;
+    cursor: pointer;
+	}
+	input[type="button"]:hover{
+    background: #cacaca;
+	}
+	
+	.input_right{
+		text-align:right;
+	}
+
+	/*** jAlert ***/
+	input#popup_ok {
+    margin: 5px;
+    margin-right: 13px;
+	}
+	#popup_overlay{
+    background: rgb(121 121 121)!important;
+    opacity: 0.5!important;		
+	}
+
+	.data_table{
+		width:100%;
+		background:white;
+		padding:0px;
+		font-size: 14px;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	.data_table th{
+		background:#2565c5;
+		color:white;
+		padding:2px;
+		border: 1px solid #d2d2d2;
+		white-space: nowrap;
+	}
+	.data_table td{
+		padding:5px;
+		border: 1px solid #d2d2d2;
+	}
+	.data_table tr:nth-child(even) {
+		background: #f7fbff;
+	}
+
+/* # ====================================================================
+   # tablesorter
+	 # ===================================================================== */
+	 
+.tablesorter-header{
+	background: #006544!important;
+	color: white!important;
+}
+.tablesorter-filter{
+	margin:5px 0px!important;
+}
+.tablesorter thead .disabled{
+	display: none!important;
+}
+/* # ====================================================================
+   # loading
+   # ===================================================================== */
+
+.cs-loading {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 63, 90, 0.77);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999999;
+	background-repeat: no-repeat;
+	background-size: 15%;
+	background-position: 50% 50%;
+}
+
+.spinner {
+	margin: 100px auto;
+	width: 150px;
+	height: 140px;
+	text-align: center;
+	font-size: 40px;
+	margin-top: 250px;
+}
+
+.spinner>div {
+	background-color: white;
+	height: 100%;
+	width: 6px;
+	display: inline-block;
+	-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+	animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+	-webkit-animation-delay: -1.1s;
+	animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+	0%, 40%, 100% {
+		-webkit-transform: scaleY(0.4)
+	}
+	20% {
+		-webkit-transform: scaleY(1.0)
+	}
+}
+
+@keyframes sk-stretchdelay {
+	0%, 40%, 100% {
+		transform: scaleY(0.4);
+		-webkit-transform: scaleY(0.4);
+	}
+	20% {
+		transform: scaleY(1.0);
+		-webkit-transform: scaleY(1.0);
+	}
+}
+
+/* # ====================================================================
+# header
+# ===================================================================== */
+.user_header {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color:blue;
+	color: white;
+	font-size:20px;
+	font-weight:bold;
+	display: flex;
+	justify-content: space-between;
+}
+.header_title{
+	margin-left: 5px;
+}
+.cs-btn-logout{
+	color:white;
+}
+
+/* # ====================================================================
+# sidemenu(JINJIのパクリです。いらないやつも入ってると思います）
+# ===================================================================== */
+#menu{
+	/* float: left; */
+	border: 1px solid #a0a0a0;
+	width: 15%;
+	min-width: 150px;
+	background-color: #f5f7f7;
+}
+#menu ul{
+    padding: 0;
+    margin: 0;
+}
+#menu ul li{
+	list-style: none;
+}
+#menu ul li.side_memu_title{
+    background-color: #000000;
+    padding: 4px 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+#menu ul li.side_memu_contents{
+    background-color: #00416f;
+    text-align: center;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+
+}
+#menu ul li.side_memu_contents:hover{
+	background-color: #0074a7;
+}
+#menu ul li.side_memu_contents a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#memu_button{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.active_memu{
+	background-color: #54d0ff!important;
+}
+.side_memu_title_admin2 .side_main_title{
+    background-color: black;
+    color: white;
+    padding: 5px 6px;
+    font-weight: bold;
+}
+.side_memu_title_admin .side_main_title{
+    background-color: black;
+    color: white;
+    padding: 5px 6px;
+    font-weight: bold;
+}
+.side_memu_title_admin .side_sub_title{
+	font-size: 12px;
+	padding: 10px 6px;
+	font-weight: bold;
+	color: white;
+	cursor:pointer;
+}
+.side_sub_title_all{
+	background-color: #00416f;
+}
+.side_memu_title_admin .side_sub_title_all:hover{
+	background: #12639c;
+}
+
+/* # ====================================================================
+# 各ページ
+# ===================================================================== */
+#contents{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+#main{
+	width: 100%;
+	margin-left:5px;
+}
+#MainInfo{
+	background: lightgray;
+	width: 100%;
+	padding-bottom: 30px;;
+}
+#MainTitle{
+	background: wheat;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#MainContents{
+	width: 99%;
+	margin: 5px auto;
+	background: white;
+}
+
+/* # ====================================================================
+# ボタンのスタイル
+# ===================================================================== */
+.btn_common_style{
+	position: relative;
+	background-color: white;
+	border: 2px solid #333;
+	color: black;
+	overflow: hidden;
+	width: 130px;
+	padding: 3px 5px;
+	font-weight: bold;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px 1px #bfbbbb;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	background: -webkit-linear-gradient(180deg, rgba(0, 34, 158),1.0), rgba(56, 163, 255), rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 1.0));
+	background: -webkit-linear-gradient(right, rgba(0, 34, 158),1.0), rgba(56, 163, 255), rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 1.0));
+	background: linear-gradient(270deg,rgb(0, 34, 158), rgb(56, 163, 255), rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 1.0));
+	background-position: 1% 50%;
+	background-size: 300% 300%;
+}
+
+/* # ====================================================================
+# ダイアログのスタイル
+# ===================================================================== */
+.ui-draggable .ui-dialog-titlebar{
+	background-color: #000000;
+    color: white;
+    padding: 3px 10px;
+    border: 0!important;
+    border-radius: 0!important;
+}
+.ui-dialog{
+    padding: 0px!important;
+    border-radius: 0px !important;
+	box-shadow: rgb(53, 53, 53) 3px 4px 9px;
+}

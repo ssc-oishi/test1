@@ -1,0 +1,14 @@
+/*
+ * �I�����X�g�̃X�^�C���V�[�g
+ * .jsSearchInputSelector�́uclasses.selector�v�Ɠ����ɂ���
+ */
+.jsSearchInputSelector{}
+.jsSearchInputSelector.dropdown{ display:none; position:absolute; top:0; left:0; background-color:#fff; box-shadow:0 2px 3px rgba(0,0,0,0.2); z-index: 10000;}
+.jsSearchInputSelector.dropdown dl dt{ padding:4px; }
+.jsSearchInputSelector.dropdown dl dt p{ line-height:1; border:1px solid #c9c9c9; }
+.jsSearchInputSelector.dropdown dl dt p input{ padding:4px 1%; width:98%; font-size:14px; border:none; }
+.jsSearchInputSelector.dropdown dl dd{}
+.jsSearchInputSelector.dropdown div ul{ margin:0; padding:0; list-style:none; overflow:auto; }
+.jsSearchInputSelector.dropdown div ul li{ padding:1px 3px; color:#000; line-height:1; cursor:default; user-select:none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; }
+.jsSearchInputSelector.dropdown div ul li.selected{ color:#fff; background-color:#aaa; }
+.jsSearchInputSelector.dropdown div ul li:hover{ color:#fff; background-color:#1e90ff; }
